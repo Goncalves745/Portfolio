@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Tower Defense Game",
+    "description": "This Game is a Unity-based project where players defend their base by placing and upgrading towers to stop waves of enemies. Check out the code and details on GitHub",
+    "image": "/images/TowerDefense.png",
+    "link": "https://github.com/GonCarRib/Tower-Defense"
+  },
+  {
+    "title": "BookVault",
+    "description": "BookVault is a book-tracking app with two versions: a sleek React and Node.js website and a user-friendly Android app built in Android Studio. Simply search and track your reads effortlessly!",
+    "image": "/images/bookvault.png",
+    "link": "https://github.com/Goncalves745/BookVaultAndroid"
+  }
+]

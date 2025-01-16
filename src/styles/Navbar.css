@@ -1,0 +1,43 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #121212;
+  padding: 0.5rem 2rem; 
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar img {
+  height: 80px; 
+  margin-right: 1rem; 
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 1.5rem; 
+}
+
+.navbar ul li a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #88d3ce;
+  border-bottom: 2px solid #88d3ce;
+  padding-bottom: 2px; /* Adjust for spacing */
+}
