@@ -67,7 +67,7 @@ const Hero = () => {
                     <button
                       className="btn btn-primary"
                       onClick={() => {
-                        window.open("/Portfolio/CV-PT.pdf", "_blank");
+                        window.open("/CV-PT.pdf", "_blank");
                         setShowPopUp(false);
                       }}
                     >
@@ -76,7 +76,7 @@ const Hero = () => {
                     <button
                       className="btn btn-secondary"
                       onClick={() => {
-                        window.open("/Portfolio/cv-en.pdf", "_blank");
+                        window.open("/cv.pdf", "_blank");
                         setShowPopUp(false);
                       }}
                     >
@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Main profile image */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
                 <img
-                  src="/Portfolio/diogo.jpeg"
+                  src="/diogo.jpeg"
                   alt="Diogo Soares, Computer Science Student"
                   className="w-full object-cover"
                 />
