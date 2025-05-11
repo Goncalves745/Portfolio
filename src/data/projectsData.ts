@@ -4,7 +4,7 @@ export const projectsData = [
     category: "Android App",
     description:
       "BookVault is  a book-tracking app with a user-friendly Android app built in Android Studio. Simply search and track your reads effortlessly!",
-    image: "/bookvault1.png",
+    image: "/Portfolio/bookvault1.png",
     technologies: ["Kotlin", "Android Studio", "Open Library API"],
     githubUrl: "https://github.com/Goncalves745/BookVaultAndroid",
     // liveUrl: "https://github.com/Goncalves745/BookVault",
@@ -14,9 +14,9 @@ export const projectsData = [
     category: "Unity Game",
     description:
       "This Game is a Unity-based project where players defend their base by placing and upgrading towers to stop waves of enemies. Check out the code and details on GitHub",
-    image: "/towerdefense.png",
+    image: "/Portfolio//towerdefense.png",
     technologies: ["Unity", "C#"],
-    githubUrl: "https://github.com/Goncalves745/TowerDefense",
+    githubUrl: "https://github.com/GonCarRib/Tower-Defense",
     // liveUrl: "https://github.com/Goncalves745/TowerDefense",
   },
   {
@@ -24,7 +24,7 @@ export const projectsData = [
     category: "Full Stack App",
     description:
       "Schedulo is a SaaS-based scheduling platform that allows users to easily book, manage, and organize appointments based on availability. Built with a modern tech stack, it streamlines scheduling for both service providers and clients.",
-    image: "/schedulo.jpeg",
+    image: "/Portfolio//schedulo.jpeg",
     technologies: [
       "React",
       "Node.js",

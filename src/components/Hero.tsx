@@ -59,15 +59,15 @@ const Hero = () => {
             </div>
             {showPopUp && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg relative">
-                  <h3 className="text-lg font-semibold mb-4 text-center">
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg relative ">
+                  <h3 className="text-lg font-semibold mb-4 text-center mt-3">
                     Choose the language of the CV
                   </h3>
                   <div className="flex justify-center gap-4">
                     <button
                       className="btn btn-primary"
                       onClick={() => {
-                        window.open("/cv-pt.pdf", "_blank");
+                        window.open("/Portfolio/CV-PT.pdf", "_blank");
                         setShowPopUp(false);
                       }}
                     >
@@ -76,7 +76,7 @@ const Hero = () => {
                     <button
                       className="btn btn-secondary"
                       onClick={() => {
-                        window.open("/cv-en.pdf", "_blank");
+                        window.open("/Portfolio/cv-en.pdf", "_blank");
                         setShowPopUp(false);
                       }}
                     >
@@ -84,7 +84,7 @@ const Hero = () => {
                     </button>
                   </div>
                   <button
-                    className="absolute top-4 right-4 text-gray-600 dark:text-gray-300"
+                    className="absolute top-2 right-4 text-gray-600 dark:text-gray-300"
                     onClick={() => setShowPopUp(false)}
                   >
                     ✕
@@ -105,7 +105,7 @@ const Hero = () => {
               {/* Main profile image */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-800">
                 <img
-                  src="/diogo.jpeg"
+                  src="/Portfolio/diogo.jpeg"
                   alt="Diogo Soares, Computer Science Student"
                   className="w-full object-cover"
                 />

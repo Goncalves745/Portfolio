@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
   const [ref, inView] = useInView({

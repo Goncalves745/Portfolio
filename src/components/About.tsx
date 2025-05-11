@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Briefcase, GraduationCap, Award, Heart } from "lucide-react";
+import { Briefcase, GraduationCap, Heart } from "lucide-react";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -75,10 +75,8 @@ const About = () => {
               <p className="text-gray-600 dark:text-gray-300">
                 Beyond the screen, you'll find me pursuing physical excellence
                 at the gym or indulging in my passion for cars. I firmly believe
-                that discipline and continuous improvement—whether in technology
-                or personal growth—are the cornerstones of success. Every day is
-                an opportunity to become a better developer and a stronger
-                individual.
+                that discipline and continuous improvement whether in technology
+                or personal growth are the cornerstones of success.
               </p>
             </div>
 
@@ -137,14 +135,10 @@ const About = () => {
             <div className="flex flex-wrap justify-center gap-3">
               {[
                 "Web Development",
-                "Machine Learning",
                 "UI/UX Design",
                 "Open Source",
                 "Cloud Computing",
                 "Mobile Apps",
-                "Data Visualization",
-                "Algorithms",
-                "Cybersecurity",
               ].map((interest, index) => (
                 <span
                   key={index}

@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { ArrowUpRight, Github, ExternalLink } from 'lucide-react';
-import { projectsData } from '../data/projectsData';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ArrowUpRight, Github } from "lucide-react";
+import { projectsData } from "../data/projectsData";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState("All");
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -31,12 +31,16 @@ const Projects = () => {
   };
 
   // Filter projects based on activeFilter
-  const filteredProjects = activeFilter === 'All' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === activeFilter);
+  const filteredProjects =
+    activeFilter === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === activeFilter);
 
   // Get unique categories
-  const categories = ['All', ...new Set(projectsData.map(project => project.category))];
+  const categories = [
+    "All",
+    ...new Set(projectsData.map((project) => project.category)),
+  ];
 
   return (
     <section className="section" id="projects">
@@ -44,7 +48,7 @@ const Projects = () => {
         <motion.div
           ref={ref}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
         >
           {/* Section Header */}
@@ -54,21 +58,24 @@ const Projects = () => {
             </span>
             <h2 className="mb-4">Featured Projects</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Here are some of my recent projects that showcase my skills and passion for creating 
-              innovative solutions through code.
+              Here are some of my recent projects that showcase my skills and
+              passion for creating innovative solutions through code.
             </p>
           </motion.div>
 
           {/* Filter Tabs */}
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-3 mb-12">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap justify-center gap-3 mb-12"
+          >
             {categories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setActiveFilter(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeFilter === category
-                    ? 'bg-secondary-100 dark:bg-secondary-900/50 text-secondary-700 dark:text-secondary-300 shadow-md'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    ? "bg-secondary-100 dark:bg-secondary-900/50 text-secondary-700 dark:text-secondary-300 shadow-md"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
                 }`}
               >
                 {category}
@@ -77,7 +84,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
@@ -98,27 +105,31 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-6 w-full">
                       <div className="flex justify-between items-center">
-                        <span className="text-white font-medium">View Details</span>
+                        <span className="text-white font-medium">
+                          View Details
+                        </span>
                         <ArrowUpRight className="text-white" size={20} />
                       </div>
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Project Info */}
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                      <h3 className="text-xl font-semibold mb-1">
+                        {project.title}
+                      </h3>
                       <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800">
                         {project.category}
                       </span>
                     </div>
                     <div className="flex space-x-3">
                       {project.githubUrl && (
-                        <a 
-                          href={project.githubUrl} 
-                          target="_blank" 
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
                           aria-label={`GitHub repository for ${project.title}`}
@@ -126,7 +137,7 @@ const Projects = () => {
                           <Github size={20} />
                         </a>
                       )}
-                      {project.liveUrl && (
+                      {/* {project.liveUrl && (
                         <a 
                           href={project.liveUrl} 
                           target="_blank" 
@@ -136,7 +147,7 @@ const Projects = () => {
                         >
                           <ExternalLink size={20} />
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -144,8 +155,8 @@ const Projects = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex} 
+                      <span
+                        key={techIndex}
                         className="inline-block px-2 py-1 text-xs font-medium bg-gray-100 dark:bg-gray-800 rounded-md"
                       >
                         {tech}
@@ -159,9 +170,9 @@ const Projects = () => {
 
           {/* More Projects Button */}
           <motion.div variants={itemVariants} className="text-center mt-12">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
+            <a
+              href="https://github.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn btn-ghost border border-gray-300 dark:border-gray-700"
             >
